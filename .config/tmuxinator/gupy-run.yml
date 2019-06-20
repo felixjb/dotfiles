@@ -1,0 +1,11 @@
+# /home/felixjb/.config/tmuxinator/gupy-run.yml
+
+name: gupy-run
+
+windows:
+  - gupy-run:
+      panes:     
+        - cd ~/dev/gupy-api-darthvader/ && docker-compose up -d
+        - cd ~/dev/gupy-api-darthvader/interfaces/http/private-api && npm run dev-sync
+        - cd ~/dev/gupy-front/ && npm start
+        - cd ~/dev/gupy-public-pages/ && npm run dev

@@ -1,0 +1,15 @@
+# /home/felixjb/.config/tmuxinator/gupy.yml
+
+name: gupy-dev
+
+windows:
+  - gupy-run:
+      layout: even-horizontal
+      panes:     
+        - cd ~/dev/gupy-api-darthvader/ && docker-compose up -d
+        - cd ~/dev/gupy-api-darthvader/interfaces/http/public-api && npm start
+  - gupy-nav:
+      panes:
+        - cd ~/dev/gupy-api-darthvader/ && clear
+        - cd ~/dev/gupy-api-darthvader/interfaces/http/private-api/ && clear
+        - cd ~/dev/gupy-api-darthvader/interfaces/http/public-api/ && clear
