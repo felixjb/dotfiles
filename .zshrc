@@ -106,6 +106,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# zsh fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
+bindkey '^H' autosuggest-clear
 
 # Alias: Gupy Repos
 alias PR='npm run pull-request'
@@ -125,4 +131,3 @@ alias c='clear'
 alias e='exit'
 alias t='node_modules/.bin/mocha components/job/test/unit/job-vacancy-manager.test.js  --grep="saveVacancies" --timeout=50000 --reporter=min'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
