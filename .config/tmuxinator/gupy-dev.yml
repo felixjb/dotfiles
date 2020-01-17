@@ -11,5 +11,4 @@ windows:
   - gupy-nav:
       panes:
         - cd ~/dev/gupy-api-darthvader/ && clear
-        - cd ~/dev/gupy-api-darthvader/interfaces/http/private-api/ && clear
         - cd ~/dev/gupy-api-darthvader/interfaces/http/public-api/ && clear
