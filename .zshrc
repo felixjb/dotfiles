@@ -113,8 +113,11 @@ export NVM_DIR="$HOME/.nvm"
 bindkey '^ ' autosuggest-accept
 bindkey '^H' autosuggest-clear
 
+# Alias: Dev Apps
+alias mocha='./node_modules/.bin/mocha'
+
 # Alias: Gupy Repos
-alias PR='npm run pull-request'
+alias PR='ggpush && npm run pull-request'
 
 # Alias: Database
 alias pgdev='pgcli --host gupy5-k8s-stage-20190121.cwajuda4gdck.us-east-1.rds.amazonaws.com --username felix_batista gupy_production'
@@ -125,9 +128,23 @@ alias tqd='tmuxinator stop gupy-dev'
 alias tgr='tmuxinator start gupy-run'
 alias tqr='tmuxinator stop gupy-run'
 
+alias vpn='cd ~/dev && sudo openvpn felix.batista.ovpn'
+
 # Alias: Linux cmds
 alias sz='source ~/.zshrc'
 alias c='clear'
 alias e='exit'
-alias t='node_modules/.bin/mocha components/job/test/unit/job-vacancy-manager.test.js  --grep="saveVacancies" --timeout=50000 --reporter=min'
 
+
+# added by travis gem
+[ -f /home/felixjb/.travis/travis.sh ] && source /home/felixjb/.travis/travis.sh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/felixjb/dev/gupy-webhook-service/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/felixjb/dev/gupy-webhook-service/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/felixjb/dev/gupy-webhook-service/node_modules/tabtab/.completions/sls.zsh ]] && . /home/felixjb/dev/gupy-webhook-service/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/felixjb/dev/gupy-webhook-service/node_modules/tabtab/.completions/slss.zsh ]] && . /home/felixjb/dev/gupy-webhook-service/node_modules/tabtab/.completions/slss.zsh
