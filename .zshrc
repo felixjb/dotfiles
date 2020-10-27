@@ -8,7 +8,9 @@ export ZSH="/home/felixjb/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -40,6 +42,8 @@ plugins=(
  zsh-syntax-highlighting
  zsh-autosuggestions
  bgnotify
+ docker
+ docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -52,6 +56,9 @@ export VISUAL='vim'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# allocate more memory to Node.js due to demanding applications
+export NODE_OPTIONS=--max_old_space_size=4096
 
 # zsh fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
